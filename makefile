@@ -5,13 +5,13 @@ CC = gcc
 
 CFLAGS = -Wall
 
-all: main.o arvore.o
-	$(CC) $(CFLAGS) -o $(NOME_PROGRAMA) main.o arvore.o
+all: main.o heap.o
+	$(CC) $(CFLAGS) -o $(NOME_PROGRAMA) main.o heap.o
 
-arvore.o: arvore.c arvore.h
-	$(CC) $(CFLAGS) -c arvore.c
+heap.o: heap.c heap.h
+	$(CC) $(CFLAGS) -c heap.c
 
-main.o: main.c arvore.h
+main.o: main.c heap.h
 	$(CC) $(CFLAGS) -c main.c
 
 clean:
