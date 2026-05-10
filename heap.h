@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int totalElementos = 0;
+extern int totalElementos;
 
 int indiceFilhoDir(int x);
 

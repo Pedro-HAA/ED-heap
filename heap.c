@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "heap.h"
 
+int totalElementos = 0;
+
 int indiceFilhoDir(int x) {
 	int indice = (2* x) + 2;
 	if (x>=totalElementos || indice>=totalElementos)
@@ -68,7 +70,7 @@ int Remover(int *heap) {
 			heap[0] = heap[totalElementos - 1];
 			totalElementos--;
 			AjustarDescendo(heap, 0);
-			printf("%d", retorno);
+			printf("\nElemento removido: %d", retorno);
 			return retorno;
 	}
 }
