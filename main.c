@@ -15,7 +15,7 @@ int main(){
     minheap = malloc(100*sizeof(int));
 
     while(1){
-        printf("(1) Inserir um elemento.\n");
+        printf("\n(1) Inserir um elemento.\n");
         printf("(2) Remover um elemento.\n");
         printf("(3) Imprimir a minheap.\n");
         printf("(4) Sair\n");
@@ -32,8 +32,13 @@ int main(){
                 break;
             
             case 2:
-                Remover(minheap);
-                printf("\n");
+                if(totalElementos != 0){
+                    Remover(minheap);
+                    printf("\n");
+                }
+                else{
+                    printf("\nA minheap está vazia, insira um elemento primeiro!\n");
+                }
                 break;
 
             case 3:
@@ -41,7 +46,7 @@ int main(){
                 imprimirHeap1(minheap);
                 printf("\n\nMinheap (árvore): ");
                 imprimirHeap2(minheap, 0);
-                printf("\n\n");
+                printf("\n");
                 break;
 
             case 4:
